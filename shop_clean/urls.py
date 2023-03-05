@@ -18,8 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')), # І  так сюди підключив головний контент ну ти шариш 
-    path('', include("user.urls")), #Cюди підключив користувачів якщо не шариш для чого вони то я поясню потім но вони потрібні повір!!!
+    path('', include('main.urls')), 
+    
 ]
 
 

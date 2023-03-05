@@ -1,16 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel = "stylesheet" src = "{%static "main/style.css"%}">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/bootstrap.min.css' %}">
     <title>{% block title%} {% endblock%}</title>
 </head>
 <body>
-    <header>
-        <div></div>
-    </header>
+    <nav class="py-3 bg-info  ">
+        <div class="d-flex justify-content-center ">
+          <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="/" class=" text-muted nav-link link-dark px-2 disable" aria-current="page" >Home</a></li>
+            <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li> -->
+            <li class="nav-item"><a href="/about" class="nav-link link-dark px-2">About</a></li>
+          </ul>
+         
+        </div>
+      </nav>
+    <header class="py-3 mb-4  bg-warning">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <span class="fs-4">Shop-cheap</span>
+          </a>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+        </div>
+      </header>
     
     <main>
         {% block content%} {% endblock%}
